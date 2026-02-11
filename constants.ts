@@ -18,7 +18,7 @@ export const COMMUNITY_LEARNING_URL =
 const img = (envKey: string, fallback: string) => process.env[envKey] || fallback;
 
 export const IMAGES = {
-  hero: img('NEXT_PUBLIC_IMAGE_HERO', "https://lh3.googleusercontent.com/aida-public/AB6AXuB2W2OTsMj4ta5NktWHvYSpeQKBFqn-4qPDqxQhgZ1qoH5a2oSa-wsxth8OlUW4PD1ju-OruyT9H7kVepMuDq1AH2LIze8TEOoAGNA-Lc6V0lkllxcRo60n_cuGTeacaIlD21qE_dHFfciOZi0c1lE-D71xo030FMbTSn9LWg4L05PIyoKEtBOuABbHHoQQVvuwwDoI16OmTBlqOOfeQ1N8JQ6blUvPcwgqzi_s9Zu3c46VxTB7HxhuNDsfklrH2zh9mC9PfVQyTVg"),
+  hero: img('NEXT_PUBLIC_IMAGE_HERO', "/hero-knowledge-hive.png"),
   profile1: img('NEXT_PUBLIC_IMAGE_PROFILE1', "https://lh3.googleusercontent.com/aida-public/AB6AXuAP1_lvkJF-frEFeJWob5ozxHEGeY-jHek_7M9DysjGT4x4AsmETjKXDdW4Fx3puk1ZcQsvRC_DANNCb9Z6tNa814UK6RkRpAS7crCVYtNUoS_eo2bO8uLAKb8Ecf7CKI0kZ7B9wae5sQ178hdxfdmMVsCtqY81M-8wz50MfbKEFY241eE-aYp1VtwINJIyfE_nYqpzKHgjHfamYS_s_stGv7rO3piSeG1Bm0a1cAJ9oFa5ArMt5uyxivHzdaHY_RhDY8HJPFOTVJ4"),
   instructor1: "https://lh3.googleusercontent.com/aida-public/AB6AXuD5F3phWljssu41oFNVwacneTdSuEDwPuPxvwXPJZLxTypj74jK5V71_or1OXdKJGKv43WAaIk_QikE_PvSU3HD0RxPS2S7tEcQgyRdJa5NJK8FqLyyag0AxYr_iNy-jD3djU-JBwDk0Z3b1K9t8iRTDji8sDnaMnjY2f3GRsupK14wlhF6unnDlI0NKLnCqYPQNceiEvxyLhTO7Wasu56lw7VNmrUoqwOFNh4ybyfeaz0HLYXNsVjZTewQbDa-FvQL7MgqPx2YnRU",
   instructor2: "https://lh3.googleusercontent.com/aida-public/AB6AXuDczIfeK6jXryhLTAzmDRqL-E3Q1t454LTE_Wq0t3d2AvG4aeTXQxKMUYA9qZ_FpyLgDjqzhMrsHnIMj8XPPhOuD7IK3yPrUMAbSGER9fvFjCohtam2I-BYTbQL3SWbdxhwHLBOxPBicBlLzUZMn7r55B13eaXKEXfME02JS__Yl7ZPgYqCaAlaAxjMT7D2-KA93gpqEi3SVX6bsO4Iqt3qePijFnPW6x0QkJdtLpRV1I_dX-TsZ2DtZSzPAYwr654AOI8tShQrgl4",

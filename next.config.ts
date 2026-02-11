@@ -13,6 +13,11 @@ const nextConfig: NextConfig = {
         hostname: 'learn.streamlinestudio.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
     ],
   },
   env: {

@@ -47,7 +47,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl"></div>
               <Image
                 src={IMAGES.hero}
-                alt="Digital Hive Concept"
+                alt="Learning hub: courses, ebooks, and community"
                 width={600}
                 height={600}
                 className="relative w-full h-full object-contain drop-shadow-2xl"

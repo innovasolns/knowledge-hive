@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import { Inter, Montserrat } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { organizationWebSiteJsonLd } from '@/lib/seo';
+import { SITE_URL } from '@/constants';
 import './globals.css';
 
 const inter = Inter({
@@ -15,10 +17,35 @@ const montserrat = Montserrat({
   weight: ['400', '600', '700', '800'],
 });
 
+const defaultTitle = 'Knowledge Hive';
+const defaultDescription =
+  'Where ideas turn into action. Courses and community for creators and entrepreneurs.';
+const ogImage = `${SITE_URL.replace(/\/$/, '')}/hero-knowledge-hive.png`;
+
 export const metadata: Metadata = {
-  title: 'Knowledge Hive',
-  description:
-    'Where ideas turn into action. Courses and community for creators and entrepreneurs.',
+  metadataBase: new URL(SITE_URL),
+  title: { default: defaultTitle, template: '%s | Knowledge Hive' },
+  description: defaultDescription,
+  keywords: ['online courses', 'entrepreneur community', 'creator education', 'learning hub', 'AI courses', 'business courses'],
+  authors: [{ name: 'Knowledge Hive', url: SITE_URL }],
+  creator: 'Knowledge Hive',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: SITE_URL,
+    siteName: 'Knowledge Hive',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [{ url: ogImage, width: 1200, height: 630, alt: 'Knowledge Hive – Courses and community for creators' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: defaultTitle,
+    description: defaultDescription,
+    images: [ogImage],
+  },
+  robots: { index: true, follow: true },
+  alternates: { canonical: SITE_URL },
 };
 
 export default function RootLayout({
@@ -32,6 +59,12 @@ export default function RootLayout({
         <link
           href="https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Round|Material+Symbols+Outlined"
           rel="stylesheet"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationWebSiteJsonLd()),
+          }}
         />
         <script
           dangerouslySetInnerHTML={{

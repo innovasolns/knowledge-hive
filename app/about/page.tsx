@@ -6,6 +6,12 @@ function getCategoryCount(courses: typeof COURSES): number {
   return new Set(courses.map((c) => c.category)).size;
 }
 
+export const metadata = {
+  title: 'About',
+  description:
+    'Knowledge Hive is a learning hub and community for creators and entrepreneurs. Access 50+ courses in AI, marketing, sales, and operations—plus a supportive community.',
+};
+
 export default function AboutPage() {
   const categoryCount = getCategoryCount(COURSES);
 

@@ -14,6 +14,11 @@ export const COMMUNITY_LEARNING_URL =
   process.env.NEXT_PUBLIC_COMMUNITY_LEARNING_URL ||
   'https://learn.streamlinestudio.net/communities/groups/knowledge-hive/learning';
 
+/** Canonical base URL for SEO (Open Graph, sitemap, JSON-LD). Set NEXT_PUBLIC_SITE_URL in production. */
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://www.knowledgehive.app';
+export const SITE_NAME = 'Knowledge Hive';
+
 /** Optional: override images with URLs from your GHL community. In .env.local set e.g. NEXT_PUBLIC_IMAGE_HERO=https://learn.streamlinestudio.net/... */
 const img = (envKey: string, fallback: string) => process.env[envKey] || fallback;
 

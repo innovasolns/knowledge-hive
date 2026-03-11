@@ -3,6 +3,16 @@ import Image from 'next/image';
 import InstructorIllustration from '@/components/InstructorIllustration';
 import { IMAGES, COMMUNITY_PRICE, MEMBERSHIP_INCLUDES } from '@/constants';
 
+export const metadata = {
+  description:
+    'Unlock 50+ courses and one powerful learning hub for creators and entrepreneurs. Premium education in AI, marketing, and leadership. Join for $5/month.',
+  openGraph: {
+    title: 'Knowledge Hive – Courses & Community for Creators',
+    description:
+      'Unlock 50+ courses and one powerful learning hub. Join 12,000+ entrepreneurs. $5/month.',
+  },
+};
+
 export default function Home() {
   return (
     <>

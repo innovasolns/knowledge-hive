@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import { COMMUNITY_PRICE, MEMBERSHIP_INCLUDES, COMMUNITY_LEARNING_URL } from '@/constants';
+import { faqJsonLd } from '@/lib/seo';
 
 export const metadata = {
-  title: 'Help Center | Knowledge Hive',
-  description: 'Get help with Knowledge Hive courses, community, and billing.',
+  title: 'Help Center',
+  description: 'FAQ: courses, community access, billing, and support. Get help with Knowledge Hive membership and learning platform.',
 };
 
 const faqs = [
@@ -44,6 +45,10 @@ const faqs = [
 export default function HelpPage() {
   return (
     <div className="bg-navy-deep min-h-screen pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
+      />
       <header className="border-b border-primary/10 py-16 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6 text-white [font-family:var(--font-montserrat)]">
